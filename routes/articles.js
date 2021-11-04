@@ -12,9 +12,14 @@ router.get('/edit/:id', async (req, res) => {
 })
 
 router.get('/:slug', async (req, res) => {
-  const article = await Article.findOne({ slug: req.params.slug })
-  if (article == null) res.redirect('/')
-  res.render('show', { article: article })
+  try {
+    const article = await Article.findOne({ slug: req.params.slug })
+    if (article == null) res.redirect('/')
+    res.render('show', { article: article })
+  } catch (error) {
+    console.log(error)
+  }
+ 
 })
 
 router.post('/', async (req, res, next) => {
@@ -22,7 +27,7 @@ router.post('/', async (req, res, next) => {
   next()
 }, saveArticleAndRedirect('new'))
 
-router.put('/:id', async (req, res, next) => {
+router.post('/edit/:id', async (req, res, next) => {
   req.article = await Article.findById(req.params.id)
   next()
 }, saveArticleAndRedirect('edit'))
