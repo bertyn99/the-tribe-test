@@ -1,0 +1,26 @@
+{
+  "name": "the-tribe-test",
+  "version": "1.0.0",
+  "description": "Dans le cadre de ce test vous serez amené à réaliser un mini blog de 2 pages, la première étant la page d'accueil où seront référencer \r quelques articles et la deuxième sera une page dynamique sur laquelle s'affichera l'article.\r Vous devrez réaliser seul ce test et vous n'avez le droit que d'utiliser express qui est un framework web backend en nodejs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pierre-Alexandre-diot/the-tribe-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pierre-Alexandre-diot/the-tribe-test/issues"
+  },
+  "homepage": "https://github.com/Pierre-Alexandre-diot/the-tribe-test#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14"
+  }
+}
