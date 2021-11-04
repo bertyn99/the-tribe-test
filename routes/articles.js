@@ -27,8 +27,13 @@ router.put('/:id', async (req, res, next) => {
   next()
 }, saveArticleAndRedirect('edit'))
 
-router.delete('/:id', async (req, res) => {
-  await Article.findByIdAndDelete(req.params.id)
+router.post('/:id/delete', async (req, res) => {
+  try {
+     await Article.findByIdAndDelete(req.params.id)
+  } catch (error) {
+    console.log(error)
+  }
+ 
   res.redirect('/')
 })
 
@@ -43,7 +48,7 @@ function saveArticleAndRedirect(path) {
       res.redirect(`/articles/${article.slug}`)
     } catch (e) {
       console.log(e);
-      res.render(`ddf${path}`, { article: article })
+      res.render(`/articles/${path}`, { article: article })
     }
   }
 }
