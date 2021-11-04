@@ -9,10 +9,12 @@
   <div class="form-group">
     <label for="markdown">Markdown</label>
     <textarea required name="markdown" id="pad" class="form-control"><%= article.markdown %></textarea>
-    <label for="markdown">Preview markdown</label>
-    <div class="col-md-6 full-height border shadow-sm h-sm" id="markdown"></div>
+    
   </div>
-  
+  <div class="form-group">
+    <label for="markdown">Preview markdown</label>
+    <div class="form-control shadow-lg" id="pmarkdown"></div>
+  </div>
   <a href="/" class="btn btn-secondary">Cancel</a>
   <button type="submit" class="btn btn-primary">Save</button>
 
