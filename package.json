@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/Pierre-Alexandre-diot/the-tribe-test#readme",
   "dependencies": {
+    "bootstrap-markdown-editor-4": "^3.0.0",
     "dompurify": "^2.3.3",
+    "editor.md": "^1.5.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "jsdom": "^18.0.1",
